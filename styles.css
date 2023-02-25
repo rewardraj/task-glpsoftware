@@ -15,23 +15,27 @@
   --font-small: 16px;
   --font-medium: 20px;
   --font-large: 24px;
+  --font-xlarge: 28px;
+  --font-xxlarge: 32px;
   --color-primary: rgba(59, 113, 202, 255);
   --color-primary-transparent: rgba(59, 113, 202, 0.5);
   --color-white: white;
   --color-red: red;
   --padding-small: 10px;
+  --padding-mid: 20px;
   --padding-medium: 30px;
+  --padding-large: 40px;
   --border-radius: 5px;
   --gap-default: 30px;
   --background-color: #eaf1ef;
   --box-shadow-default: 0px 0px 10px coral;
 
-  /* line height */
-  --line-height-default: 1.5rem;
-  /* font size */
-  --small: 16px;
-  --medium: 20px;
-  --large: 24px;
+  /* sizes */
+  --default: 2rem;
+  --gutter: 4rem;
+  --gutter-mid: 5rem;
+  --whitespace: 8rem;
+  --macro: 10rem;
 }
 
 /* component styles */
@@ -65,7 +69,7 @@
 }
 
 .heading_H1 {
-  font-size: var(--font-large);
+  font-size: var(--font-xxlarge);
   margin-bottom: var(--gap-default);
 }
 
@@ -74,9 +78,10 @@
   font-weight: 800;
 }
 
+
+/* content styles */
+
 .content__paragraph {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
   line-height: var(--line-height-default);
   font-size: var(--font-medium);
 }
@@ -97,6 +102,8 @@
   margin: 0 auto;
 }
 
+
+/* Button styles */
 .btn__Outline {
   padding: var(--padding-small) var(--padding-medium);
   border: none;
@@ -117,23 +124,23 @@
 
 .container__Fluid {
   background: #dddddd;
-  padding: 5rem 0;
+  padding: var(--gutter-mid) 0;
   width: 100%;
 }
 
 .header__wrapper {
   background: #008000;
   height: 55px;
-  padding: 20px;
+  padding: var(--padding-mid);
 }
 
 .section__Wrapper {
-  margin: 5rem 5rem;
+  margin: var(--gutter-mid) var(--gutter-mid);
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
-  gap: 5rem;
+  gap: var(--gutter-mid);
   text-align: center;
 }
 
@@ -182,9 +189,9 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 20px;
+  padding: var(--padding-mid);
   text-align: center;
-  font-size: 20px;
+  font-size: var(--font-medium);
 }
 
 /* landing page section styles */
@@ -194,90 +201,6 @@
   background-image: url(images/cruiseBoat.jpeg);
   background-size: cover;
   background-position: center;
-}
-
-.text__Wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding: 8rem 8rem;
-  text-align: left;
-  flex-wrap: nowrap;
-  color: #ffffff;
-}
-
-.text__Wrapper h3,
-h1 {
-  font-weight: 600;
-  font-size: 80px;
-  word-wrap: break-word;
-}
-
-.text__Wrapper p {
-  font-size: 28px;
-}
-
-@media (width <= 768px) {
-  .text__Wrapper {
-    justify-content: center;
-    align-items: center;
-    padding: 8rem 0;
-  }
-  .text__Wrapper h3,
-  h1 {
-    font-size: 60px;
-  }
-}
-
-.section__Title {
-  text-align: center;
-  padding: 3.5rem 0;
-  font-size: 24px;
-}
-
-.cards__Section {
-  background: #6c757d;
-  padding-bottom: 4rem;
-}
-
-.card__Wrapper {
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-  align-items: center;
-  padding: 0 5rem;
-  flex-wrap: wrap;
-}
-
-.cards {
-  height: 500px;
-  width: 400px;
-  background: #ffffff;
-  gap: 40px;
-  box-shadow: 0px 12px 14px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-}
-
-.card__Image {
-  background: #cccccc;
-  height: 35%;
-  width: 100%;
-}
-
-.card__Image p {
-  font-size: 40px;
-  font-weight: 300;
-  color: #ababab;
-  padding-top: 20%;
-  text-align: center;
-}
-
-.card__Content {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  padding: 20px 10px;
-  line-height: 1.5;
 }
 
 .hero__btn {
@@ -294,6 +217,95 @@ h1 {
   background: #3679e1;
 }
 
+.text__Wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: var(--whitespace) var(--whitespace);
+  text-align: left;
+  flex-wrap: nowrap;
+  color: #ffffff;
+}
+
+.text__Wrapper h3,
+h1 {
+  font-weight: 600;
+  font-size: 80px;
+  word-wrap: break-word;
+}
+
+.text__Wrapper p {
+  font-size: 28px;
+}
+
+/* media query for hero section */
+@media (width <= 768px) {
+  .text__Wrapper {
+    justify-content: center;
+    align-items: center;
+    padding: var(--whitespace) 0;
+  }
+  .text__Wrapper h3,
+  h1 {
+    font-size: 60px;
+  }
+}
+
+.section__Title {
+  text-align: center;
+  padding: 3.5rem 0;
+  font-size: var(--font-large);
+}
+
+
+/* Card styles */
+.cards__Section {
+  background: #6c757d;
+  padding-bottom: var(--gutter);
+}
+
+.card__Wrapper {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 6rem;
+  flex-wrap: wrap;
+}
+
+.cards {
+  height: 450px;
+  width: 350px;
+  background: #ffffff;
+  gap: 40px;
+  box-shadow: 0px 12px 14px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.card__Image {
+  background: #cccccc;
+  height: 35%;
+  width: 100%;
+}
+
+.card__Image p {
+  font-size: 40px;
+  font-weight: 300;
+  color: #ababab;
+  padding-top: 15%;
+  text-align: center;
+}
+
+.card__Content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 8px;
+  line-height: 1.5;
+}
+
+
+/* card button styles */
 .card__btn {
   background: #3679e1;
   color: #ffffff;
@@ -308,8 +320,10 @@ h1 {
   background: #28a745;
 }
 
+
+/* form section styles */
 .form__Section {
-  padding: 5rem 4rem;
+  padding: var(--gutter-mid) var(--gutter);
   position: relative;
   width: 100%;
   display: flex;
@@ -324,12 +338,12 @@ h1 {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 800;
-  margin-top: 4rem;
+  margin-top: var(--gutter);
 }
 
 .form__Group {
   flex-basis: calc(50% - 10px);
-  margin-bottom: 20px;
+  margin-bottom: var(--padding-mid);
 }
 
 .form__Group:last-child {
@@ -350,18 +364,22 @@ h1 {
   box-sizing: border-box;
 }
 
+
+/* form button */
 .form__btn {
   width: 100%;
   background: #3679e1;
   padding: 10px;
-  margin-top: 20px;
+  margin-top: var(--padding-mid);
   color: #ffffff;
-  font-size: 16px;
+  font-size: var(--font-small);
   cursor: pointer;
   border: none;
   border-radius: 25px;
 }
 
+
+/* hover card section and styles */
 .hoverCard__Section {
   background: #f47ba6;
   min-height: 800px;
@@ -373,14 +391,14 @@ h1 {
 
 .hoverCard__Wrapper {
   position: relative;
-  margin-top: 8rem;
+  margin-top: var(--whitespace);
 }
 
 .hoverCard {
   width: 400px;
   height: 250px;
   background: #ffffff;
-  margin: 8rem 5rem;
+  margin: var(--whitespace) var(--gutter-mid);
   justify-content: center;
   align-items: center;
   display: flex;
@@ -399,7 +417,7 @@ h1 {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 20px;
+  border-radius: var(--padding-mid);
 }
 
 .hoverCard__Image img {

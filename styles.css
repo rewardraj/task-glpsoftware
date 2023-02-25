@@ -1,0 +1,483 @@
+/* global styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:focus {
+  outline: none;
+}
+
+:root {
+  /* Define CSS variables */
+  --line-height-default: 1.5rem;
+  --font-small: 16px;
+  --font-medium: 20px;
+  --font-large: 24px;
+  --color-primary: rgba(59, 113, 202, 255);
+  --color-primary-transparent: rgba(59, 113, 202, 0.5);
+  --color-white: white;
+  --color-red: red;
+  --padding-small: 10px;
+  --padding-medium: 30px;
+  --border-radius: 5px;
+  --gap-default: 30px;
+  --background-color: #eaf1ef;
+  --box-shadow-default: 0px 0px 10px coral;
+
+  /* line height */
+  --line-height-default: 1.5rem;
+  /* font size */
+  --small: 16px;
+  --medium: 20px;
+  --large: 24px;
+}
+
+/* component styles */
+.header__Title {
+  width: 100%;
+  height: 40px;
+  padding: var(--padding-small);
+}
+
+.header__Text {
+  text-align: center;
+  font-size: var(--font-medium);
+  margin: 0;
+}
+
+.html__ContentWrapper,
+.button__Wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: var(--gap-default);
+  text-align: left;
+  padding: var(--padding-medium);
+  background: var(--background-color);
+  overflow: hidden;
+}
+
+.first__Heading {
+  margin-bottom: var(--gap-default);
+  max-width: max-content;
+}
+
+.heading_H1 {
+  font-size: var(--font-large);
+  margin-bottom: var(--gap-default);
+}
+
+.heading_P {
+  font-size: var(--font-medium);
+  font-weight: 800;
+}
+
+.content__paragraph {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: var(--line-height-default);
+  font-size: var(--font-medium);
+}
+
+.content__paragraph span {
+  color: var(--color-red);
+}
+
+.list__Items {
+  margin: var(--padding-medium);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-default);
+  font-size: var(--font-medium);
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.btn__Outline {
+  padding: var(--padding-small) var(--padding-medium);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: var(--font-medium);
+  font-weight: 600;
+  max-width: fit-content;
+  background: var(--color-primary);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.btn__Outline:hover,
+.btn__Outline:focus {
+  background: var(--color-primary-transparent);
+  box-shadow: var(--box-shadow-default);
+}
+
+.container__Fluid {
+  background: #dddddd;
+  padding: 5rem 0;
+  width: 100%;
+}
+
+.header__wrapper {
+  background: #008000;
+  height: 55px;
+  padding: 20px;
+}
+
+.section__Wrapper {
+  margin: 5rem 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5rem;
+  text-align: center;
+}
+
+.section__One,
+.section__Left,
+.section__Right {
+  padding: 1rem;
+  height: 60px;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  font-size: 18px;
+}
+.section__One {
+  background: #ffc0cb;
+  text-align: center;
+}
+
+.section__Inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section__Left {
+  background: #0000ff;
+  flex-basis: 40%;
+}
+
+.section__Right {
+  background: #ffff00;
+  flex-basis: 60%;
+}
+.image__FooterWrapper {
+  position: relative;
+}
+
+.image__FooterWrapper img {
+  width: 100%;
+  max-height: 300px;
+  display: block;
+  object-fit: cover;
+}
+
+.footer {
+  position: absolute;
+  background: #a52a2a;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* landing page section styles */
+
+.hero {
+  background: #ffff00; /* fallback background-color */
+  background-image: url(images/cruiseBoat.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.text__Wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 8rem 8rem;
+  text-align: left;
+  flex-wrap: nowrap;
+  color: #ffffff;
+}
+
+.text__Wrapper h3,
+h1 {
+  font-weight: 600;
+  font-size: 80px;
+  word-wrap: break-word;
+}
+
+.text__Wrapper p {
+  font-size: 28px;
+}
+
+@media (width <= 768px) {
+  .text__Wrapper {
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 0;
+  }
+  .text__Wrapper h3,
+  h1 {
+    font-size: 60px;
+  }
+}
+
+.section__Title {
+  text-align: center;
+  padding: 3.5rem 0;
+  font-size: 24px;
+}
+
+.cards__Section {
+  background: #6c757d;
+  padding-bottom: 4rem;
+}
+
+.card__Wrapper {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5rem;
+  flex-wrap: wrap;
+}
+
+.cards {
+  height: 500px;
+  width: 400px;
+  background: #ffffff;
+  gap: 40px;
+  box-shadow: 0px 12px 14px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.card__Image {
+  background: #cccccc;
+  height: 35%;
+  width: 100%;
+}
+
+.card__Image p {
+  font-size: 40px;
+  font-weight: 300;
+  color: #ababab;
+  padding-top: 20%;
+  text-align: center;
+}
+
+.card__Content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 20px 10px;
+  line-height: 1.5;
+}
+
+.hero__btn {
+  background: #28a745;
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  border: none;
+}
+
+.hero__btn:hover {
+  background: #3679e1;
+}
+
+.card__btn {
+  background: #3679e1;
+  color: #ffffff;
+  padding: 8px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.card__btn:hover,
+.card__btn:focus {
+  background: #28a745;
+}
+
+.form__Section {
+  padding: 5rem 4rem;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.form__Heading {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-top: 4rem;
+}
+
+.form__Group {
+  flex-basis: calc(50% - 10px);
+  margin-bottom: 20px;
+}
+
+.form__Group:last-child {
+  flex-basis: 100%;
+}
+
+.form__Group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form__Group input,
+.form__Group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form__btn {
+  width: 100%;
+  background: #3679e1;
+  padding: 10px;
+  margin-top: 20px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 25px;
+}
+
+.hoverCard__Section {
+  background: #f47ba6;
+  min-height: 800px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hoverCard__Wrapper {
+  position: relative;
+  margin-top: 8rem;
+}
+
+.hoverCard {
+  width: 400px;
+  height: 250px;
+  background: #ffffff;
+  margin: 8rem 5rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease-in-out;
+  border-radius: 15px;
+}
+
+.hoverCard:hover {
+  height: 450px;
+}
+
+.hoverCard__Image {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+}
+
+.hoverCard__Image img {
+  width: 300px;
+  height: 250px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+.hoverCard__Info {
+  padding: 1rem 2rem;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 22px;
+}
+
+.hoverCard__Info h3,
+.posts h3,
+.followers h3 {
+  color: #3a3a43;
+}
+.hoverCard__Info p,
+.posts p,
+.followers p,
+.following p {
+  color: #cccccc;
+}
+
+.hoverCard__Content {
+  visibility: hidden;
+  display: flex;
+  padding-top: 2rem;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+.hoverCard:hover .hoverCard__Content {
+  visibility: visible;
+  transition-delay: 0.2s;
+  opacity: 1;
+}
+
+.hoverCard__ButtonWrapper {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: space-between;
+  width: 100%;
+  visibility: hidden;
+}
+
+.hoverCard:hover .hoverCard__ButtonWrapper {
+  visibility: visible;
+  transition-delay: 0.3s;
+  opacity: 1;
+}
+
+.follow__btn,
+.message_btn {
+  padding: 18px 28px;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  outline: 1px solid #fff;
+  cursor: pointer;
+}
+
+.follow__btn {
+  color: #ffffff;
+  background: #f14a95;
+}
+
+.follow__btn:hover {
+  color: #fff;
+  background: #28a745;
+}
+
+.message_btn:hover {
+  background: #f14a95;
+  color: #fff;
+}

@@ -41,7 +41,8 @@ const TextH3 = styled.h3`
     }
 `
 const TextP = styled.p`
-    font-sixer: 28px;
+    font-size: 18px;
+    padding: var(--gutter) 0;
 `
 
 const Button = styled.button`

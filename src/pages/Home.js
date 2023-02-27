@@ -9,6 +9,7 @@ const Home = () => {
             alignItems: 'center',
             height: '100vh',
             width: '100vw',
+            backgroundColor: '#f6f5f5',
         }}>
             <h1>
                 Welcome!
